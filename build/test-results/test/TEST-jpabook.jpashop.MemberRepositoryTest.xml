@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="jpabook.jpashop.MemberRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-09-15T01:59:49.308Z" hostname="DESKTOP-675TN1F" time="5.74">
+  <properties/>
+  <testcase name="testMember()" classname="jpabook.jpashop.MemberRepositoryTest" time="0.648"/>
+  <system-out><![CDATA[10:59:49.505 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [jpabook.jpashop.MemberRepositoryTest]: MemberRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:59:49.622 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration jpabook.jpashop.JpashopApplication for test class jpabook.jpashop.MemberRepositoryTest
+10:59:49.703 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [jpabook.jpashop.MemberRepositoryTest]: MemberRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:59:49.705 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration jpabook.jpashop.JpashopApplication for test class jpabook.jpashop.MemberRepositoryTest
+10:59:49.768 [Test worker] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-15T10:59:50.104+09:00  INFO 18580 --- [    Test worker] jpabook.jpashop.MemberRepositoryTest     : Starting MemberRepositoryTest using Java 17.0.12 with PID 18580 (started by kobg in D:\Study\jpashop)
+2026-09-15T10:59:50.106+09:00  INFO 18580 --- [    Test worker] jpabook.jpashop.MemberRepositoryTest     : No active profile set, falling back to 1 default profile: "default"
+2026-09-15T10:59:50.831+09:00  INFO 18580 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-15T10:59:50.862+09:00  INFO 18580 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+2026-09-15T10:59:51.720+09:00  INFO 18580 --- [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-15T10:59:51.887+09:00  INFO 18580 --- [    Test worker] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-15T10:59:52.519+09:00  INFO 18580 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-15T10:59:52.559+09:00  INFO 18580 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-15T10:59:52.649+09:00  INFO 18580 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/jpashop user=SA
+2026-09-15T10:59:52.651+09:00  INFO 18580 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-15T10:59:52.723+09:00  INFO 18580 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:tcp://localhost/~/jpashop]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.5.250
+	Default catalog/schema: JPASHOP/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-15T10:59:53.466+09:00 DEBUG 18580 --- [    Test worker] org.hibernate.SQL                        : 
+    create global temporary table HTE_member(rn_ integer not null, id bigint, username varchar(255), primary key (rn_)) transactional
+2026-09-15T10:59:53.470+09:00  INFO 18580 --- [    Test worker] p6spy                                    : #1789437593470 | took 1ms | statement | connection 1| url jdbc:h2:tcp://localhost/~/jpashop
+create global temporary table HTE_member(rn_ integer not null, id bigint, username varchar(255), primary key (rn_)) transactional
+create global temporary table HTE_member(rn_ integer not null, id bigint, username varchar(255), primary key (rn_)) transactional;
+2026-09-15T10:59:53.589+09:00  INFO 18580 --- [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-15T10:59:53.605+09:00 DEBUG 18580 --- [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists member cascade 
+2026-09-15T10:59:53.606+09:00  INFO 18580 --- [    Test worker] p6spy                                    : #1789437593606 | took 0ms | statement | connection 2| url jdbc:h2:tcp://localhost/~/jpashop
+
+    drop table if exists member cascade 
+
+    drop table if exists member cascade ;
+2026-09-15T10:59:53.607+09:00 DEBUG 18580 --- [    Test worker] org.hibernate.SQL                        : 
+    drop sequence if exists member_seq
+2026-09-15T10:59:53.608+09:00  INFO 18580 --- [    Test worker] p6spy                                    : #1789437593608 | took 0ms | statement | connection 2| url jdbc:h2:tcp://localhost/~/jpashop
+
+    drop sequence if exists member_seq
+
+    drop sequence if exists member_seq;
+2026-09-15T10:59:53.612+09:00 DEBUG 18580 --- [    Test worker] org.hibernate.SQL                        : 
+    create sequence member_seq start with 1 increment by 50
+2026-09-15T10:59:53.614+09:00  INFO 18580 --- [    Test worker] p6spy                                    : #1789437593614 | took 0ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpashop
+
+    create sequence member_seq start with 1 increment by 50
+
+    create sequence member_seq start with 1 increment by 50;
+2026-09-15T10:59:53.616+09:00 DEBUG 18580 --- [    Test worker] org.hibernate.SQL                        : 
+    create table member (
+        id bigint not null,
+        username varchar(255),
+        primary key (id)
+    )
+2026-09-15T10:59:53.617+09:00  INFO 18580 --- [    Test worker] p6spy                                    : #1789437593617 | took 0ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpashop
+
+    create table member (
+        id bigint not null,
+        username varchar(255),
+        primary key (id)
+    )
+
+    create table member (
+        id bigint not null,
+        username varchar(255),
+        primary key (id)
+    );
+2026-09-15T10:59:53.619+09:00  INFO 18580 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-15T10:59:53.783+09:00  WARN 18580 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-15T10:59:53.798+09:00  INFO 18580 --- [    Test worker] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-15T10:59:54.368+09:00  INFO 18580 --- [    Test worker] jpabook.jpashop.MemberRepositoryTest     : Started MemberRepositoryTest in 4.607 seconds (process running for 6.226)
+2026-09-15T10:59:54.930+09:00 DEBUG 18580 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        next value 
+    for
+        member_seq
+2026-09-15T10:59:54.944+09:00  INFO 18580 --- [    Test worker] p6spy                                    : #1789437594944 | took 8ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpashop
+select next value for member_seq
+select next value for member_seq;
+2026-09-15T10:59:55.033+09:00 DEBUG 18580 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        member
+        (username, id) 
+    values
+        (?, ?)
+2026-09-15T10:59:55.035+09:00 TRACE 18580 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [memberA]
+2026-09-15T10:59:55.035+09:00 TRACE 18580 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [1]
+2026-09-15T10:59:55.036+09:00  INFO 18580 --- [    Test worker] p6spy                                    : #1789437595036 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpashop
+insert into member (username,id) values (?,?)
+insert into member (username,id) values ('memberA',1);
+2026-09-15T10:59:55.041+09:00  INFO 18580 --- [    Test worker] p6spy                                    : #1789437595041 | took 0ms | commit | connection 4| url jdbc:h2:tcp://localhost/~/jpashop
+
+;
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
