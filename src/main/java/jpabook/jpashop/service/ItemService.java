@@ -28,5 +28,4 @@ public class ItemService {
     public Item findItem(Long id) {
         return itemRepository.findOne(id);
     }
-
 }
